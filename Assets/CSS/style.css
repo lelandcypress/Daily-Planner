@@ -1,20 +1,37 @@
-.time-font {
-  font-family: "Mate SC", serif;
+body {
+  background-color: rgba(128, 128, 128, 0.26);
+  font-family: "Padauk", sans-serif;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .content {
   background-color: rgb(170, 161, 161);
 }
-.main-height {
+.container {
   min-height: 300px;
 }
 
 .row-height {
   min-height: 50px;
 }
-.header-text {
-  font-family: "Padauk", sans-serif;
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
 }
-body {
-  background-color: rgba(128, 128, 128, 0.26);
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
 }

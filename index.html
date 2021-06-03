@@ -19,127 +19,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Padauk:wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <header class="text-center header-text">
+    <header class="jumbotron my-4">
       <p>Carpe that Diem</p>
       <p>You command the day</p>
-      <p class="time-font" id="display-date">Date GOes here</p>
+      <p class="time-font" id="display-date"></p>
     </header>
     <main class="container main-height time-font">
-      <!--Time Entry-->
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">8am</div>
+      <!--Hour-->
+      <div class="row">
+        <div class="hour col-1 userInput border border-white border-start-0">
+          8am
+        </div>
+        <!--User Input-->
         <input
           type="text"
           id="task"
           name="task"
-          class="col-9 border border-white content"
+          class="task col-9 border border-white content"
         />
-        <div class="col-1 border bg-primary rounded-end"></div>
-      </div>
-
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">9am</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary rounded-end"></div>
-      </div>
-
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">10am</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">11am</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">12pm</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">1pm</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">2pm</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">3pm</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">4pm</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
-      </div>
-      <div class="row row-height">
-        <div class="col-1 border border-white border-start-0">5pm</div>
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="col-9 border border-white content"
-        />
-        <div class="col-1 border bg-primary border-white rounded-end"></div>
+        <!--Save Button-->
+        <div class="saveBtn col-1"></div>
       </div>
     </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
