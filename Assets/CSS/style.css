@@ -1,0 +1,20 @@
+.time-font {
+  font-family: "Mate SC", serif;
+}
+
+.content {
+  background-color: rgb(170, 161, 161);
+}
+.main-height {
+  min-height: 300px;
+}
+
+.row-height {
+  min-height: 50px;
+}
+.header-text {
+  font-family: "Padauk", sans-serif;
+}
+body {
+  background-color: rgba(128, 128, 128, 0.26);
+}
