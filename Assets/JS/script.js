@@ -8,13 +8,24 @@ $(document).ready(function () {
   function changeColor() {
     currentTime = moment().format("H");
     var task = $(".task");
+    for (var i = 0; i < task.length; i++) {
+      var timeElementIdVal = task[i].id;
+      var elementDOMSelector = document.getElementById(task[i].id);
+      $(task[i].id).removeClass(".present .past .future");
 
-    console.log(task.length);
+      if (timeElementIdVal < currentTime) {
+        $(elementDOMSelector).addClass("past");
+      } else if (timeElementIdVal > currentTime) {
+        $(elementDOMSelector).addClass("future");
+      } else {
+        $(elementDOMSelector).addClass("present");
+      }
+    }
   }
 
   $(".saveBtn").click(function () {
-    taskAtEight = $("#taskeight").val();
-    taskAtNine = $("#tasknine").val();
+    taskAtEight = $("#08").val();
+    taskAtNine = $("#09").val();
 
     var savedTasks = {
       eightAM: taskAtEight,
@@ -26,9 +37,10 @@ $(document).ready(function () {
   function init() {
     retrieve = localStorage.getItem("savedTasks");
     oldTasks = JSON.parse(retrieve);
-    $("#taskeight").val(oldTasks.eightAM);
-    $("#tasknine").val(oldTasks.nineAM);
+    $("#08").val(oldTasks.eightAM);
+    $("#09").val(oldTasks.nineAM);
+    changeColor();
+    setInterval(changeColor(), 1000 * 60 * 5);
   }
   init();
-  changeColor();
 });
