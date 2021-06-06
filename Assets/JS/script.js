@@ -1,16 +1,20 @@
 $(document).ready(function () {
   function clock() {
-    var currentTime = moment().format("LLL");
-    $("#display-date").text(currentTime);
+    var clock = moment().format("LLL");
+    $("#display-date").text(clock);
   }
-
   setInterval(clock, 1000);
+
+  function changeColor() {
+    currentTime = moment().format("H");
+    var task = $(".task");
+
+    console.log(task.length);
+  }
 
   $(".saveBtn").click(function () {
     taskAtEight = $("#taskeight").val();
     taskAtNine = $("#tasknine").val();
-    console.log(taskAtEight);
-    console.log(taskAtNine);
 
     var savedTasks = {
       eightAM: taskAtEight,
@@ -24,7 +28,7 @@ $(document).ready(function () {
     oldTasks = JSON.parse(retrieve);
     $("#taskeight").val(oldTasks.eightAM);
     $("#tasknine").val(oldTasks.nineAM);
-  
   }
   init();
+  changeColor();
 });
