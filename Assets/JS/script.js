@@ -1,28 +1,30 @@
-var userInput;
-var currentTime
-var localStorage = {
-  8: "",
-  9:"",
-  10:""
+$(document).ready(function () {
+  function clock() {
+    var currentTime = moment().format("LLL");
+    $("#display-date").text(currentTime);
+  }
 
-};
+  setInterval(clock, 1000);
 
-function clock() {
-  var currentTime = moment().format("LLL");
-  $("#display-date").text(currentTime);
-}
-setInterval(clock, 1000);
-$(".hour");
-$(".input");
-$(".saveBtn").addEventListener(click);
+  $(".saveBtn").click(function () {
+    taskAtEight = $("#taskeight").val();
+    taskAtNine = $("#tasknine").val();
+    console.log(taskAtEight);
+    console.log(taskAtNine);
 
+    var savedTasks = {
+      eightAM: taskAtEight,
+      nineAM: taskAtNine,
+    };
+    localStorage.setItem("savedTasks", JSON.stringify(savedTasks));
+  });
 
-
-function updateTask(hour,userInput){
-
-}
-
-function init(){
-//pull from local storage and dynamically populate list
-
-}
+  function init() {
+    retrieve = localStorage.getItem("savedTasks");
+    oldTasks = JSON.parse(retrieve);
+    $("#taskeight").val(oldTasks.eightAM);
+    $("#tasknine").val(oldTasks.nineAM);
+  
+  }
+  init();
+});

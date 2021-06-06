@@ -29,10 +29,10 @@
       rel="stylesheet"
     />
   </head>
-
+  <!--End CSS-->
   <body>
     <header class="jumbotron my-4">
-      <p>Carpe that Diem</p>
+      <p id="test">Carpe that Diem</p>
       <p>You command the day</p>
       <p class="time-font" id="display-date"></p>
     </header>
@@ -45,14 +45,30 @@
         <!--User Input-->
         <input
           type="text"
-          id="task"
-          name="task"
+          id="taskeight"
+          name="taskeight"
           class="task col-9 border border-white content"
         />
         <!--Save Button-->
-        <div class="saveBtn col-1"></div>
+        <div class="saveBtn border border-white col-1"></div>
+      </div>
+      <!--Hour-->
+      <div class="row">
+        <div class="hour col-1 userInput border border-white border-start-0">
+          9am
+        </div>
+        <!--User Input-->
+        <input
+          type="text"
+          id="tasknine"
+          name="tasknine"
+          class="task col-9 border border-white content"
+        />
+        <!--Save Button-->
+        <div class="saveBtn border border-white col-1"></div>
       </div>
     </main>
+    <!--Begin JS Scripts-->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
