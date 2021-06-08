@@ -28,7 +28,7 @@ $(document).ready(function () {
       }
     }
   }
-  //Event Listeners forsave buttons, updates object literal upon button press, and sets updated Object into Local Storage//
+  //Event Listeners for save buttons, updates object literal upon button press, and sets updated Object into Local Storage//
   $(".saveBtn").click(function (event) {
     event.preventDefault();
 
