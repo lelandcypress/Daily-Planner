@@ -16,7 +16,7 @@
    <br>
    <br>
 
-#### Deployed URL :
+#### Deployed URL : https://lelandcypress.github.io/Daily-Planner/
 
 <br>
 Assets Used
