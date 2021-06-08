@@ -33,6 +33,20 @@ body {
   align-items: center;
 }
 
+/*button depress effect*/
+.saveBtn:hover {
+  -webkit-box-shadow: 0px 0px 2.5px 2.5px #ffffff;
+  -moz-box-shadow: 0px 0px 2.5px 2.5px #faf9f9;
+  box-shadow: 0px 0px 2.5px 2.5px #ffffff;
+}
+
+.saveBtn:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 0px 0px 1px 1px #ffffff;
+  /* Lowering the shadow */
+}
+
 .past {
   background-color: rgb(170, 161, 161);
 }

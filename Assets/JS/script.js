@@ -1,18 +1,24 @@
 $(document).ready(function () {
+  //Uses moment.js to build clock displayed on page
   function clock() {
     var clock = moment().format("dddd, MMMM Do, LT");
     $("#display-date").text(clock);
   }
   setInterval(clock, 1000);
 
+  //controls color change. Loops through every 5 minutes removing CSS elements and reapplying them based on the time of day//
   function changeColor() {
+    //Sets current hour as a string variable//
     currentTime = moment().format("H");
     var task = $(".task");
     for (var i = 0; i < task.length; i++) {
+      //Grabs ID value of hour blocks as string//
       var timeElementIdVal = task[i].id;
+      //Element Selector for hour blocks
       var elementDOMSelector = document.getElementById(task[i].id);
+      //removes any pre-existing class//
       $(task[i].id).removeClass(".present .past .future");
-
+      //reassigns class and subsequent CSS property based on matching the current time
       if (timeElementIdVal < currentTime) {
         $(elementDOMSelector).addClass("past");
       } else if (timeElementIdVal > currentTime) {
@@ -22,7 +28,7 @@ $(document).ready(function () {
       }
     }
   }
-
+  //Event Listeners forsave buttons, updates object literal upon button press, and sets updated Object into Local Storage//
   $(".saveBtn").click(function (event) {
     event.preventDefault();
 
@@ -49,10 +55,10 @@ $(document).ready(function () {
       fourPM: taskAtFour,
       fivePM: taskAtFive,
     };
-
+    //converts object literal into JSON string and sets it to Local Storage//
     localStorage.setItem("savedTasks", JSON.stringify(savedTasks));
   });
-
+  // Populates hour blocks from key value pairs based on Object saved in local storage//
   function init() {
     retrieve = localStorage.getItem("savedTasks");
     oldTasks = JSON.parse(retrieve);
